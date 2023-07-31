@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ssh.strato.de
+        server: ftp.strato.de
         username: 514490794.swh.strato-hosting.eu
         password: ${{ secrets.FTPPASS }}
         port: 21
