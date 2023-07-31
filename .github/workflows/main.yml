@@ -14,3 +14,4 @@ jobs:
         server: ssh.strato.de
         username: 514490794.swh.strato-hosting.eu
         password: ${{ secrets.FTPPASS }}
+        port: 21
