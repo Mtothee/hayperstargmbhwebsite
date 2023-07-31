@@ -13,6 +13,6 @@ jobs:
       with:
         server: ssh.strato.de
         username: 514490794.swh.strato-hosting.eu	
-        password: SimL0723!?
+        password: ${{ secrets.FTPPASS }}
         port: 22
         protocol: ftps
