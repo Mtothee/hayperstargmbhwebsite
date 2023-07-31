@@ -185,7 +185,7 @@
 .page-header .container {
     position: relative;
     padding: 45px 0 45px 35px;
-    border-left: 15px solid #FFFFFF;
+    border-left: 15px solid #fff321;
 }
 
 .header-carousel .container::before,
@@ -198,7 +198,7 @@
     left: 0;
     width: 100px;
     height: 15px;
-    background: #FFFFFF;
+    background: #fff321;
 }
 
 .header-carousel .container::after,
