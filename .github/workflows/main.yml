@@ -7,12 +7,12 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3.5.3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+  
+    - name: 📂 Sync Files
+      uses: SamKirkland/web-deploy@v1
       with:
-        server: ssh.strato.de
-        username: 514490794.swh.strato-hosting.eu	
-        password: ${{ secrets.FTPPASS }}
-        port: 22
-        protocol: ftps
+        target-server: ssh.strato.de
+        remote-user: 514490794.swh.strato-hosting.eu	
+        private-ssh-key: ${{ secrets.FTPPASS }}
+        destination-path: ~/
+
