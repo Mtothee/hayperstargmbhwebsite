@@ -236,19 +236,19 @@
                         <form action="mailtsent.php" method="post">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Ihr Name" style="height: 55px;">
+                                    <input id="txtname" name="txtname" type="text" class="form-control border-0" placeholder="Ihr Name" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Telefonnummer" style="height: 55px;">
+                                    <input id="txttelefonnummer" name="txttelefonnummer" type="text" class="form-control border-0" placeholder="Telefonnummer" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Ihre E-Mail" style="height: 55px;">
+                                    <input id="txtemail" name="txtemail" type="email" class="form-control border-0" placeholder="Ihre E-Mail" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Anliefertage (z.B. Montag, Donnerstag)" style="height: 55px;">
+                                    <input id="txtanliefertage" name="txtanliefertage" type="text" class="form-control border-0" placeholder="Anliefertage (z.B. Montag, Donnerstag)" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
+                                    <select id="txtwieware" name="txtwieware" class="form-select border-0" style="height: 55px;">
                                         <option selected>Wie erhalten Sie Ihre Ware?</option>
                                         <option value="1">auf Rollen</option>
                                         <option value="2">auf Paletten</option>
@@ -257,13 +257,13 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text"
+                                        <input type="text" id="txtstartdatum" name="txtstartdatum"
                                             class="form-control border-0 datetimepicker-input"
-                                            placeholder="Start Datum" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                                            placeholder="Start Datum" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Wünsche oder weitere Informationen" rows="5"></textarea>
+                                    <textarea id="txtweitereinfos" name="txtweitereinfos" class="form-control border-0" placeholder="Wünsche oder weitere Informationen" rows="5"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Anfragen</button>

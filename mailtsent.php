@@ -8,12 +8,23 @@ require './lib/phpmailer/Exception.php';
 require './lib/phpmailer/PHPMailer.php';
 require './lib/phpmailer/SMTP.php';
 
+//variablen speichern
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $telefonnummer = $_POST['txttelefonnummer'];
+    $emailadresse = $_POST['txtemail'];
+    $anliefertage = $_POST['txtanliefertage'];
+    $wieware = $_POST['txtwieware'];
+    $startdatum = $_POST['txtstartdatum'];
+    $weitereinfos = $_POST['txtweitereinfos'];
+}
+
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.strato.de';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -29,9 +40,21 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Neue Anfrage von Website';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mailbodytext = 'Du hast eine neue Anfrage erhalten. Hier die Infos: <br><br> <hr>
+    Name: ' . $name . '<br>
+    Telefonnummer: ' . $telefonnummer . '<br>
+    E-Mail Adresse:' . $emailadresse . '<br>
+    Anliefertage:' . $anliefertage . '<br>
+    Warenanlieferung auf Paletten oder Rolli:' . $wieware . '<br>
+    Startdatum:' . $startdatum . '<br><br>
+    Weitere Informationen: ' . $weitereinfos . '
+    <hr>
+    <br><br>
+    Ende der Nachricht.
+    ';
 
+    $mail->Body    = $mailbodytext;
+    
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
