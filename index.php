@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         //Recipients
         $mail->setFrom('info@hayper-star.de', 'Hayper Star Website');
-        $mail->addAddress('m.ehrenschwendtner@gmail.com', 'Markus');     //Empfänger
+        $mail->addAddress('info@hayper-star.de', 'Edris');     //Empfänger
     
         //Content
         $mail->isHTML(true);
@@ -334,7 +334,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <?php
                                         if ($mailsent=="1"){
                                             echo '<div class="alert alert-success" role="alert">
-                                                    Vielen Dank für Ihre Nachricht. Wir kümmern uns umgehend darum!
+                                                    <b>Vielen Dank für Ihre Nachricht. Wir kümmern uns umgehend darum!</b>
                                                 </div>';
                                         }else{
                                             echo '<button class="btn btn-primary w-100 py-3" type="submit">Anfragen</button>';
