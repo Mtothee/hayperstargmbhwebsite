@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav me-auto">
-                    <a href="index.html" class="nav-item nav-link active">Startseite</a>
+                    <a href="index.php" class="nav-item nav-link active">Startseite</a>
                     <a href="#warenverraeumer" class="nav-item nav-link">Warenverräumung & Regalauffüllung</a>
                     <a href="#kontakt" class="nav-item nav-link">Jetzt anfragen</a>
                 </div>
