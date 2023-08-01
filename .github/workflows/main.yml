@@ -1,0 +1,17 @@
+on: push
+name: 🚀 Deploy website on push to Strato
+jobs:
+  web-deploy:
+    name: 🎉 Deploy to Strato
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code from repository
+      uses: actions/checkout@v3.5.3
+
+    - name: 📂 Sync files to Strato
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.strato.de
+        username: 514490794.swh.strato-hosting.eu
+        password: ${{ secrets.FTPPASS }}
+        port: 21
