@@ -56,9 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Body    = $mailbodytext;
         
         $mail->send();
-        echo 'Message has been sent';
+        $mailsent="1";
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $mailsent="0";
     }
 }
 ?>
@@ -331,7 +331,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <textarea id="txtweitereinfos" name="txtweitereinfos" class="form-control border-0" placeholder="Wünsche oder weitere Informationen" rows="5"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Anfragen</button>
+                                    <?php
+                                        if ($mailsent=="1"){
+                                            echo '<div class="alert alert-success" role="alert">
+                                                    Vielen Dank für Ihre Nachricht. Wir kümmern uns umgehend darum!
+                                                </div>';
+                                        }else{
+                                            echo '<button class="btn btn-primary w-100 py-3" type="submit">Anfragen</button>';
+                                        }
+                                    ?>
+                                   
                                 </div>
                             </div>
                         </form>
