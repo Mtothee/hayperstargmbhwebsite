@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Hayper Star GmbH - Warenverräumung und Regalauffüllung</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Warenverräumung, Warenverräumer, Regalauffüllung, Burgkirchen, Altötting, Mühldorf, Verräumung" name="keywords">
-    <meta content="Wir bieten professionelle Warenverräumung und Regalauffüllung für Supermärkte und Warenhäuser. " name="description">
+    <meta content="Wir bieten professionelle Warenverräumung und Regalauffüllung für Groß- und Einzelhandel." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -229,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <p class="fw-medium text-primary"><i class="bi bi-check text-success me-3" style="font-size: 2rem;color: #fff321 !important;"></i>geschultes Personal</p>
                     <p>Unser geschultes und perfekt eingespieltes Team sorgt dafür, dass Ihr Geschäft immer sauber und einladend aussieht.</p>
                     
-                    <p class="fw-medium text-primary"><i class="bi bi-check text-success me-3" style="font-size: 2rem;color: #fff321 !important;"></i>Strecklieferung</p>
+                    <p class="fw-medium text-primary"><i class="bi bi-check text-success me-3" style="font-size: 2rem;color: #fff321 !important;"></i>Streckenlieferung</p>
                     <p>Wir verräumen auch Waren aus Streckenlieferungen - wir passen unsere Dienstleistung an Ihre spezifischen Anforderungen an.</p>
                     
                     <p class="fw-medium text-primary"><i class="bi bi-check text-success me-3" style="font-size: 2rem;color: #fff321 !important;"></i>Nachtschicht & Spätschicht</p>
